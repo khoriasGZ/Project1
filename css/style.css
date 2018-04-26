@@ -1,0 +1,227 @@
+  /*Paramètres généraux*/
+  body {
+    background: url('../images/logo.png') no-repeat 50px 0, url('../images/background.png') repeat;
+    font-family: 'WeDrive', 'Arial', 'sans-serif';
+    color: #5A4A4A;
+  }
+
+  main {
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-family: 'Drive', 'Arial', 'sans-serif';
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 0.9em;
+  }
+
+  /*Paramètres de la barre de navigation */
+  header {
+    display: flex;
+    justify-content: center;
+  }
+
+  header nav {
+    text-transform: uppercase;
+  }
+
+  header nav li {
+    background-color: rgba(255, 255, 255, 0.30);
+    border-radius: 3px;
+    padding: 0.3em 0.5em 0.3em 0.5em;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 0px;
+  }
+
+  header nav li a {
+    color: #5A4A4A;
+  }
+
+  header nav li:hover {
+    background-color: #5A4A4A;
+  }
+
+  header nav li:hover a {
+    color: white;
+    text-decoration: none;
+  }
+
+  /*Style des articles*/
+  .article {
+    display: flex;
+    flex-wrap: nowrap;
+    box-shadow: 0px -4px 5px 1px rgba(194, 194, 194, 0.20);
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding: 0;
+    border-bottom: 11px solid transparent;
+  }
+
+  /*==>Style des décorations en bas des articles<==*/
+  .triangle-bl {
+    border-image: url('../images/bkg-triangle-blue.png') 33 0 11 fill repeat;
+  }
+
+  .triangle-pk {
+    border-image: url('../images/bkg-triangle-pink.png') 33 0 11 fill repeat;
+  }
+
+  /* ==> Paramètres de la partie texte des articles <== */
+  .article-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: white;
+    padding: 30px;
+  }
+
+  .article-container p:first-child {
+    text-align: right;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  .social img {
+    border-radius: 50%;
+    background-color: #E0DDDD;
+    float: right;
+    margin-left: 5px;
+    margin-top: 5px;
+  }
+
+  .button-navigation {
+    text-align: center;
+  }
+
+  .categories {
+    background-color: #F9F8F8;
+    color: #5A4A4A;
+    padding: 0.3em 0.8em 0.3em 0.8em;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+
+  .social .categories:hover {
+    color: white;
+    background-color: #5A4A4A;
+    border-radius: 3px;
+    text-decoration: none;
+  }
+
+  .facebook:hover {
+    background-color: #3B5998;
+  }
+
+  .twitter:hover {
+    background-color: #4099FF;
+  }
+
+  /*Boutons de navigation de bas d'articles*/
+  button {
+    width: 110px;
+    border: none;
+    color: white;
+    background-color: rgba(90, 74, 74, 0.50);
+    text-transform: uppercase;
+    margin-right: 5px;
+    padding: 0.3em 0.8em 0.3em 0.8em;
+    font-weight: 700;
+  }
+
+  button:hover {
+    background-color: #5A4A4A;
+  }
+
+  button a {
+    color: white;
+  }
+
+  button a:hover {
+	color: white;
+	text-decoration: none;
+  }
+
+  /*Paramètres du footer*/
+  footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  footer div p:first-child {
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+
+  footer div p:nth-child(2) {
+    text-align: right;
+    font-size: 0.8em;
+    color: #a0a0a0;
+  }
+
+  li {
+    display: inline;
+    list-style: none;
+    margin: 10px;
+  }
+
+  footer nav ul li a {
+    color: #5A4A4A;
+  }
+
+  footer nav ul li a:hover {
+    color: #a0a0a0;
+    text-decoration: none;
+  }
+
+  /*Gestion des articles responsive*/
+  @media screen and (max-width: 1200px) {
+    body {
+      background: url('../images/background.png');
+    }
+    @media screen and (max-width: 992px) {
+      .article-container {
+        padding: 15px;
+      }
+    }
+    @media screen and (max-width: 767px) {
+      header nav li {
+        background-color: transparent;
+        border-radius: 3px;
+        padding: 0em 0em 0em 1em;
+        margin: 5px;
+      }
+      .img-fluid {
+        width: 100%;
+        max-height: 150px;
+        object-fit: cover;
+      }
+      .article {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      header {
+        justify-content: flex-start;
+      }
+    }
+    @media screen and (max-width: 576px) {
+      .social {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      footer div p:first-child {
+        margin-left: 10px;
+      }
+      footer nav ul li {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 0px;
+        text-align: center;
+      }
+    }
+  }
